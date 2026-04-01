@@ -28,7 +28,11 @@
 | 仪表盘 | 5 张图表（Tier 分布、爆发类型、搜索量趋势等） |
 | 筛选视图 | Tier 1 高优先级 / Tier 2 观察区 |
 
-> 截图占位：在此放置飞书多维表格截图
+><img width="1845" height="946" alt="image" src="https://github.com/user-attachments/assets/2fd08698-126a-4d0b-bccd-c587d97da29d" />
+<img width="1549" height="448" alt="image" src="https://github.com/user-attachments/assets/71a0c375-2480-457b-b07f-32d300091455" />
+<img width="1747" height="268" alt="image" src="https://github.com/user-attachments/assets/b9133dc3-7c88-4fbb-a925-0b335a0ac3c6" />
+<img width="1795" height="892" alt="image" src="https://github.com/user-attachments/assets/0a1a880e-40cb-4a98-9955-e744d7d6aad1" />
+
 
 ---
 
@@ -265,8 +269,12 @@ set PYTHONIOENCODING=utf-8
 | [AMZ123](https://www.amz123.com) | ABA 热搜词排名、涨跌幅 |
 | [Sorftime](https://www.sorftime.com) | 搜索量趋势、CPC、竞品数据、扩展词 |
 
----
+
+
 
 ## License
+如果需要了解，共创，学习相关亚马逊运营Skill，请添加我们公众号和相关联系方式，进行分享相关亚马逊相关运营Skill源文件
+![9f453825a605ac5a92149be126636dc4](https://github.com/user-attachments/assets/9680fd49-0f0f-4642-8601-462ca28f1c77)
 
+---<img width="844" height="376" alt="image" src="https://github.com/user-attachments/assets/0c809a29-8dad-4fd0-b5ce-d439e250a60a" />
 [MIT](LICENSE)
